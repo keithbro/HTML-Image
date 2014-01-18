@@ -9,8 +9,8 @@ HTML-Image - Convert HTML to an image using Perl and PhantomJS
 Synopsis
 --------
 
-  use HTML::Image;
-  my $base64_image = to_png( '<h1 style="color: #0f0;">Hello World</h1>' );
+    use HTML::Image;
+    my $base64_image = to_png( '<h1 style="color: #0f0;">Hello World</h1>' );
 
 Methods
 -------
