@@ -10,7 +10,7 @@ Synopsis
 --------
 
     use HTML::Image;
-    my $base64_image = to_png( '<h1 style="color: #0f0;">Hello World</h1>' );
+    my $base64_image = to_png( '<h1>Hello World</h1>' );
 
 Methods
 -------
