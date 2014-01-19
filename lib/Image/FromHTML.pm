@@ -1,19 +1,21 @@
-package HTML::Image;
+package Image::FromHTML;
 
 use strict;
 use warnings;
 
 use FindBin;
 
-use vars qw( @ISA @EXPORT );
-
-require Exporter;
-@ISA = qw(Exporter);
-
-@EXPORT = qw( to_png );
+sub new {
+  my ( $class, %options ) = @_;
+  my $self = \%options;
+  bless $self, $class;
+  return $self;
+}
 
 sub to_png {
-  my ( $html ) = @_;
+  my ( $self ) = @_;
+
+  my $html = $self->{html};
   $html =~ s/"/\\"/g;
 
   my $js_script = "$FindBin::Bin/../script/to_png.js";
