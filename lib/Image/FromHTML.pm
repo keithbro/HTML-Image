@@ -3,6 +3,8 @@ package Image::FromHTML;
 use strict;
 use warnings;
 
+# ABSTRACT: Convert HTML to an image using Perl and PhantomJS
+
 use FindBin;
 
 sub new {
