@@ -1,10 +1,10 @@
 use strict;
 use warnings;
 
+use Image::FromHTML;
 use Test::More;
-use HTML::Image;
 
-my $image = to_png( q{<h1 style="color: #0f0;">Hello World!!!</h1>} );
-ok( $image, 'Image exists' );
+my $image = Image::FromHTML->new( html => q{<h1 style="color: #0f0;">Hello World!!!</h1>} );
+like( $image->to_png, qr/^[A-Za-z0-9+\/=]*$/, 'Valid Base64' );
 
 done_testing;

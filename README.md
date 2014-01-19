@@ -1,10 +1,10 @@
-HTML-Image
+Image-FromHTML
 ==========
 
 Name
--------
+----
 
-HTML-Image - Convert HTML to an image using Perl and PhantomJS
+Image-FromHTML - Convert HTML to an image using Perl and PhantomJS
 
 Requirements
 ------------
@@ -14,8 +14,9 @@ Requirements
 Synopsis
 --------
 
-    use HTML::Image;
-    my $base64_image = to_png( '<h1>Hello World</h1>' );
+    use Image::FromHTML;
+    my $image = Image::FromHTML->new( html => '<h1>Hello World</h1>' );
+    my $base64_png = $image->to_png;
 
 Methods
 -------
