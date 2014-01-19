@@ -6,6 +6,11 @@ Name
 
 HTML-Image - Convert HTML to an image using Perl and PhantomJS
 
+Requirements
+------------
+
+- PhantomJS - http://phantomjs.org/download.html
+
 Synopsis
 --------
 
